@@ -1,0 +1,7 @@
+13. Animation- Animaker
+
+Animaker is a Do It Yourself animation software. It allows users to create animations using pre built characters and templates using cloud. An animation is a dynamic medium in which images or the objects are manipulated to appear as moving movie, video or smooth moving images. Animation may be the combination of images, text, moving slides, audio and other multimedia.
+Our animation is all about a new and an efficient sorting method, proposed by Vishal Bothra.
+This sorting method, termed as ‘Efficient selection sort (∃SS)’, is an efficient implementation of Selection Sort. It basically traverses the array from both ends to find the smallest element and exchanging it with the first element, and then decreasing the size of the array by one for the next call.
+
+As this Algorithm has been proposed in a research paper, you can visit it on google.
