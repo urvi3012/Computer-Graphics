@@ -1,0 +1,162 @@
+12.  Study Of Text, Video And Animation File Formats
+
+Objective: To study text, video, and animation file formats.
+Theory:
+
+TEXT FILE FORMATS:
+
+Text files contain textual data and may be saved in plain text or rich text formats. While most text files are documents created and saved by users, they can also be used by software developers to store program data. Examples of text files include word processing documents, log files, and saved email messages.
+
+1.  .doc :
+A _DOC file is a Microsoft Word document with the .doc extension changed to ._doc. It is a .DOC file, which may include formatted text, images, graphs, tables, and charts. _DOC files may be renamed to "._doc" files by an email program to prevent the file from being blocked by an email service.
+
+2.  .docx :
+A _DOCX file is a Microsoft Word Open XML document with the .docx extension changed to ._docx. It is a .DOCX file, which includes formatted text, images, graphs, tables, and charts. _DOCX files may be renamed to "._docx" files by an email program to prevent the file from being blocked by an email service.
+
+3.  .ans :
+.ans text documents are graphic text documents based on the ANSI text standard. It may also be used to store text graphics, which uses characters to display images in a text document.
+
+4.  .asc :
+An ASC file is an armored ASCII file used by Pretty Good Privacy (PGP), an encryption program used for secure communication. It contains a digitally signed message and may store plain-text written information, as well as binary information encoded as text. ASC files also include a key as clear-signed text, which can be verified using PGP authentication methods.
+
+5.  .awt :
+Document template created by AbiWord, a free word processing program.It stores preset page layout and style settings for a document.It enables users to author multiple .awt documents with the same formatting.
+
+6.  .1st :
+Readme .txt file sometimes bundled with applications.It contains important information or instructions for operating the software and uses the "1st" extension so that users know to open the readme first before running the application for the first time.
+
+7.  .ascii :
+Plain text file that uses ASCII encoding that can be opened and edited with any text editor. It is  much more commonly uses the .ASC or .TXT extension.
+
+8.  .apt :
+Text document written in Almost Plain Text (APT), a simple markup language that describes the formatting of a text document. It can be converted to HTML, PDF, PostScript, RTF, or other formats using a document generation program such as Aptconvert, which is often used with Maven software development tools.
+
+9.  .bad :
+E-mail message that could not be delivered by Microsoft Exchange Server. It includes the message sender, message recipient(s), subject, and body, just like the original message.
+
+10.  .boc :
+Document saved with EasyWord, the word processor included with the EasyOffice office suite. It is used for saving large files created with EasyWord. It can also be exported to a .DOC file, which can be opened by Microsoft Word.
+
+
+
+
+AUDIO FILE FORMATS:
+The Audio Files category includes compressed and uncompressed audio formats, which contain waveform data that can be played with audio playback software. This category also includes MIDI files, musical scores, and audio project files, which typically do not contain audio data.
+
+1. PCM
+PCM stands for Pulse-Code Modulation, a digital representation of raw analog audio signals. Analog sounds exist as waveforms, and in order to convert a waveform into digital bits, the sound must be sampled and recorded at certain intervals (or pulses).There is no compression involved. The digital recording is a close-to-exact representation of the analog sound.
+PCM is the most common audio format used in CDs and DVDs. There is a subtype of PCM called Linear Pulse-Code Modulation, where samples are taken at linear intervals.
+
+2. WAV
+WAV stands for Waveform Audio File Format (also called Audio for Windows at some point but not anymore). It’s a standard that was developed by Microsoft and IBM back in 1991.
+A lot of people assume that all WAV files are uncompressed audio files, but that’s not exactly true. WAV is actually just a Windows container for audio formats. This means that a WAV file can contain compressed audio, but it’s rarely used for that.
+3. AIFF
+AIFF stands for Audio Interchange File Format. Similar to how Microsoft and  AIFF is a format that was developed by Apple for Mac systems back in 1988.
+Also similar to WAV files, AIFF files can contain multiple kinds of audio. For example, there is a compressed version called AIFF-C and another version called Apple Loops which is used by GarageBand and Logic Audio — and they all use the same AIFF extension.
+4. MP3
+MP3 stands for MPEG-1 Audio Layer 3. It was released back in 1993. The main pursuit of MP3 is to cut out all of the sound data that exists beyond the hearing range of most normal people and to reduce the quality of sounds that aren’t as easy to hear, and then to compress all other audio data as efficiently as possible.
+5. AAC
+AAC stands for Advanced Audio Coding. It was developed in 1997 as the successor to MP3.The compression algorithm used by AAC is much more advanced and technical than MP3, so when you compare a particular recording in MP3 and AAC formats at the same bitrate, the AAC one will generally have better sound quality.
+6. OGG (Vorbis)
+OGG is a multimedia container that can hold all kinds of compression formats, but is most commonly used to hold Vorbis files — hence why these audio files are called OggVorbis files.
+Vorbis was first released in 2000 and grew in popularity due to two reasons: first, it adheres to the principle of open source software , and second, it performs significantly better than most other lossy compression formats (i.e. produces a smaller file size for equivalent audio quality).
+7. WMA
+WMA stands for Windows Media Audio. It was first released in 1999 . It is a proprietary format created by Microsoft.Not unlike AAC and OGG, WMA was meant to address some of the flaws in the MP3 compression method — and as such, WMA’s approach to compression is pretty similar to AAC and OGG. In other words, in terms of objective quality, WMA is better than MP3.
+8. FLAC
+FLAC stands for Free Lossless Audio Codec. It is introduction in 2001. FLAC can compress an original source file by up to 60% without losing a single bit of data.  FLAC is an open source and royalty-free format rather than a proprietary one, so it doesn’t impose any intellectual property constraints..
+9. ALAC
+ALAC stands for Apple Lossless Audio Codec. It was developed and launched in 2004 as a proprietary format but eventually became open source and royalty-free in 2011. While ALAC is good, it’s slightly less efficient than FLAC when it comes to compression.
+10. WMA
+WMA stands for Windows Media Audio. There is  a lossless alternative called WMA Lossless that uses the same extension. Compared to FLAC and ALAC, WMA Lossless is the worst in terms of compression efficiency but only slightly. It’s a proprietary format so it’s no good for fans of open source software, but it is supported natively on both Windows and Mac systems.
+
+ANIMATION FILE FORMATS: 
+Animation means giving life to any object in computer graphics. Computer-assisted animation and computer-generated animation are two categories of computer animation.
+The basic idea behind animation is to play back the recorded images at the rates fast enough to fool the human eye into interpreting them as continuous motion.
+
+Applications :
+Cartoons
+Simulations
+Scientific Visualization
+Analysis and Understanding
+Teaching and Communicating
+Architecture Visualization
+
+Animation file formats
+There are a number of different types of animation file formats. Each type stores graphics data in a different way. Bitmap, vector, and metafile formats are by far the most commonly used formats.
+
+Graphics file Formats
+•	Jpeg
+•	Png
+•	Pdf
+•	Raw
+•	Tiff
+•	Tga
+•	Gif
+•	Vector File Formats
+•	Pdf
+•	Eps
+
+1. JPEG
+JPEG stands for Joint Photographic Experts Group. JPEG is a commonly used method of compression for digital images . The original JPE Group was organized in 1986. The first JPEG standard was issued in 1992. It is the most common format saved by digital cameras. Web pages generally use JPEG because amount of data used for an image is important.
+2. PNG
+Png stands for Joint Portable Network Graphics. It contains a bitmap of indexed colors and uses lossless compression, similar to a .GIF file but without copyright limitations. PNG files are commonly used to store graphics for web images.
+3.PDF
+Pdf stands for Portable Document Format. A PDF file is a multi-platform document created by Adobe Acrobat or another PDF application. The PDF format is commonly used for saving documents and publications in a standard format that can be viewed on multiple platforms. In many cases, PDF files are created from existing documents instead of from scratch.
+ 
+4.RAW
+A RAW file is an image generated by digital cameras thats why Raw image files are sometimes called digital negatives. It contains uncompressed, raw image data that can be adjusted for exposure and white balance using software that supports the format. Raw image formats are intended to capture as closely as possible. RAW file size is much larger that .JPEG files, but is slightly smaller than .TIF files.
+ 
+5. TIFF
+Tiff stands for Tag Image File Format. The first version of the TIFF specification was published by Aldus Corporation in the autumn of 1986. A TIFF file is a graphics container that stores raster images. It may contain high-quality graphics that support color depths from 1 to 24-bit and supports both lossy and lossless compression. TIFF file using edited and re-saved without losing image quality. 
+6. TARGA
+Tga stands for Truevision Graphics A. TGA, often referred to as TARGA. TARGA is an acronym for Truevision Advanced Raster Graphics. Tga is a raster graphics file format created by Truevision. It is a now part of Avid Technology.Images in the Targa Graphic format might be stored in their raw form or with compression, which might be preferred for icons, line drawings and other simple images. This format is often seen associated with image files used in video games.
+ 
+7. GIF
+Gif stands for Graphic Interchange Format. Gif is a file extension for an often animated raster graphics file. Gif is the second most common image format used on the World Wide Webafter JPEG.  It was on June 15, 1987. GIFs can be used for small animations and low-resolution film clips. GIFs may be used to store low-color data for games. GIF files are saved in a lossless format, meaning the clarity of the image is not compromised with GIF compression.
+ 
+8. EPS
+EPS stands for Encapsulated PostScript. They’re typically used by drawing applications to describe how to produce images, drawings, or layouts. EPS file can contain text as well as graphics. EPS is what early versions of the AI format (Adobe Illustrator Artwork) was based on. They are a common format used for transferring image data between different operating systems.
+ 
+9. SVG
+Svg stands for Scalable Vector Graphics. It is an XML-based vector image format for two-dimensional graphics with support for interactivity and animation. The SVG specification is an open standard developed by the World Wide Web Consortium (W3C) since 1999. SVG allows three types of graphic objects: vector graphic shapes such as paths and outlines consisting of straight lines and curves, bitmap images, and text. The SVG format is not natively supported by Adobe Photoshop, Photoshop Elements, and InDesign. However, you can open SVG files in these programs using the SVG Kit for Adobe CS plug-in, which is developed by Scand.
+
+
+
+
+
+
+VIDEO FILE FORMATS:
+With new and latest developed technology, it is possible to put videos clips ijn presentations, multimedia creations, games and in every field. Video is collection of images, which may contain audio, sound and moving pictures.
+These videos can be furthur combined with text, dialogues and ither effects to make it more impressive and interactive. Mixing or combinng a video in a multimead file is cumbersome and requires efforts. 
+
+Videos are available in analog format, and to make it readable in our computer systems, we need to change and convert it into computer understandable form, i.e digital form.
+Computer reads a particular video file as a combination of still pictures, called frames. To make a smooth running video, frame rate is set to 15-20 frames per second. 
+
+Usually, these videis acquire large amount of space in the memory, thus it is essential to compress the digitised video clips to a large extent. 
+
+A normal video file in a digital format is made up of two parts, a “codec” and a “container”. A “codec” is used to compress and decompress a video file. Some examples of “codecs” are FFMpeg, DivX, XviD, and x264. A “container” is a collection of files that stores information about the digital file. Some popular types of “containers” are AVI, FLV, WMV, MP4, and MOV.
+
+1 AVI (Audio Video Interleave):
+It was Developed by Microsoft. It is one of the oldest format and due to it’s simple architecture, AVI files are able to run on a number of different systems like Windows, Macintosh, Linux; is also supported by popular web browsers. AVI files stores data that can be encoded in a number of different codec’s. 
+
+AVI files have file extension .avi. AVI file format structure is based on the Resource Interchange File Format (RIFF). This file format allocates all the information in a particular file into blocks or “chunks”. 
+2 FLV (Flash Video Format)
+FLV files are videos that are encoded by Adobe Flash software, usually with codecs following the Sorenson Spark or VP6 video compression formats. .FLV file itself contains video streaming bits and is used to deliver Flash-based videos over the Web.They can be played via the Adobe Flash Player, web browser plugins or one of several third party programs.videos in the FLV format remain in high quality even after compression to a smaller file size, which means that the videos on the Web load quickly and won’t spend a lot of time using up bandwidth.Today, almost all video sharing sites such as Youtube stream videos in Flash.
+
+ 3 WMV (Windows Media Video)
+Developed by Microsoft, WMV was originally designed for web streaming applications. WMV files are the tiniest video files over the Web, as their file size decreases significantly after compression, which results in poor video quality. However, one advantage of this small file size is that it is probably the only video file format that allows users to upload and share their videos through the e-mail system.
+ 
+4 MOV (Apple QuickTime Movie)
+Developed by Apple. Inc, the QuickTime file format is a popular type of video sharing and viewing format amongst Macintosh users, and is often used on the Web, and for saving movie and video files. An MOV file can store audio, video, and text in the same file through different tracks, or the tracks can point to the data stored elsewhere in another file. mov files are of high quality and are usually big in file size.
+ 
+5 MP4 (Moving Pictures Expert Group 4)
+MP4 is an abbreviated term for MPEG-4 Part 14, a standard developed by the Motion Pictures Expert Group who was responsible for setting industry standards regarding digital audio and video, and is commonly used for sharing video files on the Web.The MP4 file format is also another great file sharing format for the Web, MP4 file sizes are relatively small but the quality remains high even after compression. MP4 standard is also becoming more popular than FLV for online video sharing, as it compatible with both online and mobile browsers and also supported by the new HTML5.
+
+6 AVCHD (Advanced Video Coding High Definition)
+The AVCHD format was introduced in 2006, jointly developed by Sony and Panasonic, It was for use in high definition consumer camcorders. AVCHD supports .HDV  format  and is acceptable for professional use.
+Playback of the AVCHD format is not supported across all Blu-ray Disc players as even though AVCHD does share many format similarities with Blu-ray Disc, it is not part of the Blu-ray Disc specification.
+7 DV (Digital Video)
+Recorded video file created by a digital video (DV) camera are saved to the camera's DV tape and uses a standard format for the DV video. It is supported by several video editing programs. It is also sometimes used for other video formats such as QuickTime-DV or DV-AVI.
+8 HDV (High-Definition Video)
+It is a tape-based format. Its videos can be recorded or printed back to tape. For domestic and consumer use, HDV video can be delivered on a Blu-ray Disc without requiring any re-encoding, or can be converted to AVCHD and delivered on an AVCHD disc, or can also be downconverted to DVD-Video without much loss.It is low cost, portability, and have an acceptable image quality.
+
