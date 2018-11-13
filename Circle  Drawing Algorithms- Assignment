@@ -1,0 +1,205 @@
+Circle Drawing Algorithms
+Introduction:
+Computer graphics is an art of drawing pictures on computer screens with the help of programming. It involves computations, creation, and manipulation of data. In other words, we can say that computer graphics is a rendering tool for the generation and manipulation of images.
+Drawing a circle on the screen is a little complex than drawing a line. Circle have combination of points, which must make a smooth curve. this smooth curve is called as circumference. Thus, circle is the locus of a point which moves at a fixed distance from a fixed point. this fixed point is called center and fixed distance is called radii of the circle. 
+In computer graphics, we use the symmetricity property of the circle to plot the circle boundary. There are two popular algorithms for generating a circle − Bresenham’s Algorithm and Midpoint Circle Algorithm. These algorithms are based on the idea of determining the subsequent points required to draw the circle.
+
+Property Of Circle:
+The circle is a symmetrical figure formed by plotting points from a fixed distance taken from a fixed point.
+A circle generation algorithm can take advantage of the circle ’s symmetry to plot eight points for each value that the algorithm calculates.
+Eight-way symmetry is used by reflecting each calculated points around 45o axis.
+Circle’s Equation:   (x – h)2 + (y – k)2 = r2, 
+Where x, y = x & y coordinates with the center being at the point (h, k) and the radius is "r".
+
+
+Introduction to Circle Drawing Algorithms:
+Generally, there are two circle generation algorithms that take advantage of the symmetry of the circle but it’s still not easy to display a smooth curve on the computer screen because it’s just made up of small square pixels. The two algorithms namely:
+Midpoint circle drawing algorithm 
+Bresenham’s circle drawing algorithm
+uses the key feature of the circle that it is highly symmetric. So for the whole of 360o of a circle, we will divide it into 8 parts each octant of 45o. 
+
+Midpoint Algorithm:
+Mid-Point circle algorithm is related to work by Pitteway and Van Aken.
+We need to plot the perimeter to calculate all the perimeter points of the circle in the first octant and then print them along with their mirror points in the other octant.The key feature of the Mid-Point Circle drawing algorithm is that decision parameter depends on the previous parameter and corresponding pixels. The major drawback is that the resulting circle has large gaps and the calculations are not very efficient as it has a square (multiply) and square root operation.
+
+
+
+Why we use it:
+It is based on the function F discussed in the next section for testing the spatial relationship between an arbitrary point (x, y) and a circle of radius centered at the origin.
+
+Boundary Condition:
+Whether the mid-point lies inside or outside the circle can be decided by using the formula:-
+Given a circle centered at (0,0) and radius r and a point p(x,y)
+F(p) = x2 + y2 – r2
+if         F(p)<0, the point is inside the circle
+F(p)=0, the point is on the perimeter
+F(p)>0, the point is outside the circle 
+
+
+Bresenham's Circle Drawing Algorithm:
+Bresenham's circle algorithm is named after Jack Elton Bresenham who developed it in 1962 at IBM. The Bresenham’s circle drawing algorithm is derived from the mid-point circle drawing algorithm. It determines the points of a raster that have to be selected to form an approximate straight line between two points. The key feature of Bresenham’s circle drawing algorithm is that Bresenham decision parameter only depends on previous decision parameter.
+
+Why it is used?
+It uses integer addition, bit shifting, and subtraction which are cheap operations in computer architecture. It is one of the easiest algorithms and is important even at present because of its speed and simplicity. It overcomes the shortcomings of the Midpoint circle drawing algorithm by using cheaper mathematical operations and using less memory resulting in a much more smoother circle as compared to the Midpoint circle drawing algorithm. 
+It is very less time-consuming.
+
+Working:
+In Bresenham’s algorithm at any point (x, y) we have two option either to choose the next pixel in the east i.e. (x+1, y) or in the south-east i.e. (x+1, y-1).
+
+
+
+
+
+Midpoint circle drawing algorithm:
+In computer graphics, the midpoint circle algorithm is an algorithm used to determine the points needed for rasterizing a circle.
+The algorithm can be generalized to conic sections. The algorithm is related to work by Pitteway and Van Aken.
+To form a brief introduction of the algorithm we are about to study, we perform unit increments along one axis while calculating the respective increment for the other axis, in accordance with the closest pixel position to the specified circle path at each step. Initially, we assume the center of the Cartesian plane, the origin, as the center of our circle. Hence for a given radius r and screen center position ( x, y,), we can first set up our algorithm to calculate pixel positions around a circular path centered at the coordinate origin (0,0).
+We need to plot the perimeter points of a circle whose center coordinates and radius are given using the Midpoint Circle Drawing Algorithm.
+We use the above algorithm to calculate all the perimeter points of the circle in the first octant and then print them along with their mirror points in the other octants. This will work only because a circle is symmetric about its center.
+
+
+
+Derivation :
+To apply the midpoint method, we define a circle function: 
+In Midpoint Circle Algorithm, the decision parameter at the kth step is the circle function evaluated using the coordinates of the midpoint of the two-pixel centers which are the next possible pixel position to be plotted. Let us assume that we are giving unit increments to x in the plotting process and determining the y position using this algorithm. Assuming we have just plotted the kth pixel at ( Xk, Yk), we next need to determine whether the pixel at the position ( Xk+1, Yk ) or the one at ( Xk+1 , Yk-1) is closer to the circle.
+Our decision parameter pk at the kth step is the circle function evaluated at the midpoint of these two pixels. The coordinates of the midpoint of these two pixels are ( Xk+1, Yk-1/2).
+Thus pk x Successive decision parameters are obtained using incremental calculations, thus avoiding a lot of computation at each step. We obtain a recursive expression for the next decision parameter i.e. at the k+1th step, in the following manner. Using Equ. (4), at the k+1th step, we have:
+Now if Pk <=0, then the midpoint of the two possible pixels lies within the circle, thus north pixel is nearer to the theoretical circle. Hence, Yk+1= Yk . Substituting this value of in Equ. (6), we have 
+If pk > 0 then the midpoint of the two possible pixels lies outside the circle, thus south pixel is nearer to the theoretical circle. Hence, Yk+1= Yk-1. Substituting this value of in Equ. (6), we have  
+For the boundary condition, we have x=0, y=r. Substituting these values in (4), we have 
+For integer values of pixel coordinates, we can approximate P0=1-r,
+Thus we have:
+          
+
+
+Algorithm:
+ Input radius r and circle center (xc,yc) and obtain the first point on the circumference of the circle centered on the origin as
+(xo,yo)=(0,r)
+     2.  Calculate the initial value of decision parameter as
+           P0 = 1-r
+     3. At each xk position starting at a=0 perform the following test.
+3.1 pk<0 the next point along the circle centered on origin is (xk+1,yk) and =pk+2xk+3
+3.2    If pk>=0 the next point along the circle is (xk+1,yk-1)
+           pk+1 =pk+2xk-2yk+5
+          Or =pk+2xk+1-2yk+1+1
+       4. Determine symmetry points in the other 7 octants.
+     5. Transfer each calculated pixel position (x,y) onto a circular path centered on (xc,yc) and                                                                  plot the coordinate values as x=x+xc and y=y+yc.
+      6.  Repeat step 3 to 5 until x<=y.
+
+Numerical:
+r=10
+po=1-r=-9
+(xo,yo)=(0,10)    
+
+
+Advantages:
+The midpoint method is used for deriving efficient scan-conversion algorithms to draw geometric curves on raster displays.
+The method is general and is used to transform the nonparametric equation f(x,y) = 0, which describes the curve, into an algorithm that draws the curve.
+Disadvantages:
+time consumption is high
+the distance between the pixels is not equal so we won't get a smooth circle.
+
+Bresenham’s circle drawing algorithm:
+It’s a difficult task to make a smooth arc point by point on a computer screen, i.e viewport. This is because our computer screen is organized in forms of the matrix of pixels. Hence, to make a smooth continuous arc, we plot a point on a pixel and then extend the arc by choosing the point as near as possible on the circumference. 
+The circle is known as symmetrical figure, thus, we can use its property by plotting points of only one octant and reflecting it in other seven octants, making our methods efficient. 
+Circle drawing algorithm mainly deals with the decision, which method to choose to plot the next pixel position in order to generate a smooth arc. Bresenham’s circle drawing algorithm:
+For any point (x.y), we have two options either to choose the next pixel in east i.e. (x+1, y) or in the south east i.e. (x+1, y-1).  
+
+ 
+
+Derivation:
+Let us consider the circle at origin (0,0) i.e. x2 + y2 = r2 and (xk , yk) be  initial points.
+F(x,y) = x2 + y2 – r2
+F(N) = (xk + 1)2 + y2k – r2
+F(S) = (xk + 1)2 + (yk - 1)2 – r2
+Decision parameter (Pk) = F(N) + F(S)
+Pk = 2( xk + 1 )2 + y2k + (yk - 1)2 – r2
+Initial decision parameter (Po) = 2(1+0)2 + r2 + (r-1)2 – 2r2
+Po = 3-2r 
+Pk+1 = 2(xk + 2)2 + y2k+1 + (yk+1 -1)2 – 2r2
+Pk+1 – Pk = 2[(xk+2)2 – (xk+1)2] + (y2k+1 – y2k) + (yk+1 -1)2 – (yk-1)2
+Pk+1 = pk + 2(2xk+3) + [(yk+1 + yk)(yk+1 - yk)] + [(yk+1 + yk - 2)(yk +1 - yk)]-----------(A)
+
+
+Case 1 :
+ If P is negative
+xk+1 – xk = 1
+yk+1 – yk = 0
+Put in (A)
+Pk+1 = Pk + 2(2xk + 3)
+Pk+1 = Pk + 4xk + 6
+
+Case 2 :
+If P is positive
+xk+1 – xk = 1
+yk+1 – yk = -1
+Put in (A)
+Pk+1 = Pk + 4xk+6 + (yk+1 +yk)(-1) + (yk+1 +yk -2)(-1)
+Pk+1 = Pk + 4xk – 4yk + 10
+The decision of choosing a point is based on decision parameter ‘p’. 
+If d > 0, then (x+1, y-1) is to be chosen as the next pixel as it will be closer to the arc
+Else (x+1, y) is to be chosen as next pixel.
+And as derived, initial value of decision parameter is :
+d= 3- 2*r
+To draw the circle for a given radius ‘r’ and center (xc, yc) We will start from (0, r) and move in the first quadrant till x=y (i.e. 45 degrees).
+Algorithm: 
+Input radius r, center (xc,yc) and obtain the first point on the circumference at P(0,r).
+Calculate the initial value of decision parameter p=3 – 2*r.
+At each xk, starting at k=0, perform following tests:
+3.1 if pk<0, then the next point of the circle is (xk + 1, yk)
+      and pk+1 = pk  + 4xk + 6.
+3.2 if pk>=0, then the next point of the circle is (xk + 1, yk  - 1)
+      and pk+1 = pk  + 4xk -  4yk + 10.
+Determine the symmetry points in other 7 octants by circle symmetry property.
+Transfer each point (x,y) according to the original center of the circle by substituting
+x=x+xc and y=y+yc.
+Repeat steps (3) to (5) for x<=y times.
+Numerical:
+Plot a circle with radius 6 and center (3,3):
+x0 = 0
+y0 = r
+p0 = 3 – 2r 
+if pi < 0 ,
+   then yi+1 = yi 
+   and pi+1 = pi + 4xi + 6 
+else if pi ≥ 0, 
+   then yi+1 = yi – 1 
+   and pi+1 = pi + 4(xi – yi) + 10
+Stop when xi >= yi and determine symmetry points in the other octants
+Given radius=6
+So, first point is (0, r) = (0, 6)
+
+Now, reflecting each point as: 
+
+Figure
+
+
+Advantages and disadvantages:
+It uses integer value calculations, thus eliminating the time needed for floating point calculations. Apart from this, using the symmetry property of a circle makes this circle drawing algorithm much efficient. It works by analyzing and manipulating the linear equations for only integer calculations. It has an advantage of speed and precision because working with floating point values requires more time and memory and such values would need to be rounded to integers anyway.
+Apart from this, There is no loss of generality here since once the points are determined they may be translated relative to any center that is not the origin (0,0) and we can easily determine the points when the origin is shifted. 
+
+Difference Between two Algorithms:
+Bresenham's line algorithm determines the points of a raster that have to be selected to form an approximate straight line between two points. It is used in a bitmap image to draw line primitives. It uses integer addition, bit shifting and subtraction which are cheap operations in computer architectures. It is one of the earliest algorithms and is important even in the present because of its speed and simplicity. Its extension can be used for drawing circles.
+Midpoint circle algorithm is used in computer graphics to determine the points required for rasterizing a circle. The Bresenham's circle algorithm is derived from it. The midpoint circle algorithm may be generalized to conic sections.
+
+Applications:
+The circle which is symmetric yet complex and difficult to draw shape can be plotted to least error and smoothly on a computer screen without complex calculations which are quite time-consuming.
+One needs to have an efficient algorithm for drawing circle, especially for animated display.
+It is used in bitmap image to draw line primitives.
+It is also possible to use the same concept to rasterize a parabola, ellipse or any other two-dimensional curve. 
+
+Future Aspects and Other Methods :
+Many alternative approaches are suggested by many authors to draw circle much efficiently and much smoothly. One such algorithm was suggested which made use of the fact that the semicircular angle is 90o. The algorithm involves only integer arithmetic only. The computational load, as well as the quality of circle drawn by this algorithm, is comparable to that of the mid-point algorithm.
+
+Let point P has coordinates (x, y). If we take m as the slope of the segment AP then the slope of the segment BP which is perpendicular to the segment AP is –1/m. 
+
+
+
+
+
+
+
+The equation of the segment AP is y = mx + mr and that of the segment BP is x + my = r. 
+Solving these equations we get the parametric equations of a circle with center at the origin and radius r as 
+x = r{(1 – m2 )/(1 + m2 )} and y = 2mr/(1 + m2 ). 
+We can use these equations to draw a circle using an appropriate step size of m.
