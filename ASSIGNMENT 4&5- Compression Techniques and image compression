@@ -1,0 +1,28 @@
+Compression Techniques
+
+There are two categories of compression techniques used with digital graphics, lossy and lossless. 
+Lossless and lossy compression are terms that describe whether or not, in the compression of a file, all original data can be recovered when the file is uncompressed. With lossless compression, every single bit of data that was originally in the file remains after the file is uncompressed. All of the information is completely restored. 
+This is generally the technique of choice for text or spreadsheet files, where losing words or financial data could pose a problem. The Graphics Interchange File (GIF) is an image format used on the Web that provides lossless compression. 
+On the other hand, lossy compression reduces a file by permanently eliminating certain information, especially redundant information. When the file is uncompressed, only a part of the original information is still there (although the user may not notice it). Lossy compression is generally used for video and sound, where a certain amount of information loss will not be detected by most users. The JPEG image file, commonly used for photographs and other complex still images on the Web, is an image that has lossy compression. Using JPEG compression, the creator can decide how much loss to introduce and make a trade-off between file size and image quality.
+
+Steps Involved in JPEG Image Compression
+Image compression is a type of data compression applied to digital images, to reduce their cost for storage or transmission. Algorithms may take advantage of visual perception and the statistical properties of image data to provide superior results compared with generic compression methods.
+
+Step 1 (Transformation): Color images are transformed from RGB into a luminance/chrominance image (Eye is sensitive to luminance, not chrominance, so that chrominance part can lose much data and thus can be highly compressed.
+
+Step 2 (Down Sampling): The down sampling is done for colored component and not for luminance component .Down sampling is done either at a ratio 2:1 horizontally and 1:1 vertically (2h 1 V). Thus the image reduces in size since the ‘y’ component is not touched, there is no noticeable loss of image quality.
+
+Step 3 (Organizing in Groups): The pixels of each color component are organized in groups of 8×2 pixels called “ data units” if number of rows or column is not a multiple of 8, the bottom row and rightmost columns are duplicated.
+
+Step 4 ( Discrete Cosine Transform): Discrete Cosine Transform ( DCT) is then applied to each data unit to create 8×8 map of transformed components.DCT involves some loss of information due to the limited precision of computer arithmetic. This means that even without the map there will be some loss of image quality but it is normally small.
+
+Step 5 (Quantization): Each of the 64 transformed components in the data unit is divided by a separate number called its ‘Quantization Coefficient (QC)’ and then rounded to an integer. This is where information is lost irretrievably, Large QC cause more loss. In general, the most JPEG implements allow use QC tables recommended by the JPEG standard.
+
+Step 6 (Encoding): The 64 quantized transformed coefficients ( Which are now integers) of each data unit are encoded using a combination of RLE and Huffman coding.
+
+Step 7 (Adding Header): The last step adds header and all the JPEG parameters used and output the result.
+
+
+
+
+
